@@ -8,12 +8,20 @@ app_license = "mit"
 # 添加翻译路径
 translated_languages = ["zh"]
 
-#设置定时任务
+#设置定时任务自动生成出入库单据
 scheduler_events = {
     "cron": {
         "0 23 * * *": [
-            "sulada_app.tasks.In and out data_task"
+            "sulada_app.tasks.in_and_out_data_task"
         ]
+    }
+}
+
+
+#自动获取当天出入库数据
+doc_events = {
+    "In and out data": {
+        "before_insert": "sulada_app.events.in_and_out_data.before_insert"
     }
 }
 

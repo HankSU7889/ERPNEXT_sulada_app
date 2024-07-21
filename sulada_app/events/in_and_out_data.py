@@ -1,7 +1,7 @@
 import frappe
 
-def in_and_out_data_task():
-    frappe.logger().info("Daily task executed at 23:00")
+def before_insert(doc, method):
+    frappe.logger().info("Before Insert for In and out data triggered")
     
     # 获取今天的日期
     todays_date = frappe.utils.today()
@@ -20,9 +20,6 @@ def in_and_out_data_task():
         WHERE dn.docstatus = 1 AND dn.posting_date = %s
     """, todays_date, as_dict=1)
 
-    # 创建一个空的 "In and out data" 单据
-    doc = frappe.new_doc("In and out data")
-
     # 检查并更新采购入库数量
     if purchase_total_qty and purchase_total_qty[0].get('total_qty') is not None:
         doc.todays_material_total = purchase_total_qty[0].get('total_qty')
@@ -35,7 +32,5 @@ def in_and_out_data_task():
     else:
         doc.todays_sales_total = 0
 
-    # 保存单据
-    doc.save()
-    frappe.logger().info("In and out data document created and saved")
+    frappe.logger().info("In and out data document updated with totals")
 
