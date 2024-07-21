@@ -4,6 +4,10 @@ app_publisher = "SuHongKai"
 app_description = "sulada Internal Use"
 app_email = "923918316@qq.com"
 app_license = "mit"
+
+# 添加翻译路径
+translated_languages = ["zh"]
+
 # required_apps = []
 
 # Includes in <head>
