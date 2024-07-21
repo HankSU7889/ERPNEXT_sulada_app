@@ -8,6 +8,16 @@ app_license = "mit"
 # 添加翻译路径
 translated_languages = ["zh"]
 
+#设置定时任务
+scheduler_events = {
+    "cron": {
+        "0 23 * * *": [
+            "sulada_app.tasks.In and out data_task"
+        ]
+    }
+}
+
+
 # required_apps = []
 
 # Includes in <head>
