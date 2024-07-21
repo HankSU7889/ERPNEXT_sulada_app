@@ -1,0 +1,54 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "\u51fa\u5165\u5e93\u6570\u636e-.YY..MM..DD.-.#",
+ "creation": "2024-06-23 01:04:01.963671",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_qrj9",
+  "todays_sales_total",
+  "todays_material_total"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_qrj9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "todays_sales_total",
+   "fieldtype": "Read Only",
+   "label": "\u4eca\u5929\u9500\u552e\u51fa\u5e93\u6570"
+  },
+  {
+   "fieldname": "todays_material_total",
+   "fieldtype": "Read Only",
+   "label": "\u4eca\u5929\u5165\u5e93\u603b\u6570"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-07-20 18:10:35.261380",
+ "modified_by": "Administrator",
+ "module": "Sulada App",
+ "name": "In and out data",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
