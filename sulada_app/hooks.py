@@ -40,7 +40,7 @@ patches = [
     "sulada_app.patches.update_reorder_item_cron"
 ]
 
-# 在 sulada_app/hooks.py 文件中
+# 采购订单页面保存后增加筛选包含SULADA条码
 
 doc_events = {
     "Purchase Order": {
@@ -48,8 +48,8 @@ doc_events = {
     }
 }
 
+# 增加采购订单页面导出按钮
 
-#采购订单页面增加条码字段
 #doctype_js = {
 #    "Purchase Order": "public/js/purchase_order.js"
 #}
