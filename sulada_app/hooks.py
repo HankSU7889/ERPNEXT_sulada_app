@@ -25,6 +25,35 @@ doc_events = {
     }
 }
 
+# 在 sulada_app/hooks.py 覆盖物料需求时间
+
+scheduler_events = {
+    "cron": {
+        "0 23 * * *": [
+            "erpnext.stock.reorder_item.reorder_item"
+        ]
+    }
+}
+
+# 注册补丁
+patches = [
+    "sulada_app.patches.update_reorder_item_cron"
+]
+
+# 在 sulada_app/hooks.py 文件中
+
+doc_events = {
+    "Purchase Order": {
+        "before_save": "sulada_app.events.purchase_order.before_save"
+    }
+}
+
+
+#采购订单页面增加条码字段
+#doctype_js = {
+#    "Purchase Order": "public/js/purchase_order.js"
+#}
+
 
 # required_apps = []
 
