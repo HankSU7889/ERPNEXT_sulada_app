@@ -48,12 +48,12 @@ doc_events = {
     }
 }
 
-# 增加采购订单页面导出按钮
+# sulada_app/hooks.py采购订单和物料需求页面增加导出按钮
 
-#doctype_js = {
-#    "Purchase Order": "public/js/purchase_order.js"
-#}
-
+doctype_js = {
+    "Purchase Order": "public/js/purchase_order_custom.js",
+    "Material Request": "public/js/material_request_custom.js"
+}
 
 # required_apps = []
 
