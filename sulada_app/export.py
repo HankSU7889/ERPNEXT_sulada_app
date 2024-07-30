@@ -24,6 +24,10 @@ def export_document(doctype, docname, file_type='excel'):
         headers = ['物料编码', '物料名称', '数量', '仓库']
         items = doc.items
         supplier_name = "No_Supplier"  # Material Request 可能没有供应商字段
+    elif doctype == "Delivery Note":
+        headers = ['物料编码', '物料名称', '数量', '仓库', '条码']
+        items = doc.items
+        customer_name = doc.customer  # 获取客户名称
     else:
         frappe.throw(f"不支持的单据类型: {doctype}")
     
@@ -49,14 +53,23 @@ def export_document(doctype, docname, file_type='excel'):
                 item.qty,
                 item.warehouse
             ]
+        elif doctype == "Delivery Note":
+            row = [
+                item.item_code,
+                item.item_name,
+                item.qty,
+                item.warehouse,
+                item.custom_barcode
+            ]
         
         writer.writerow(row)
 
-
-    
     content = output.getvalue().encode('utf-8-sig')
     
-    filename = f"{supplier_name}_{doc.name}.csv"
+    if doctype == "Delivery Note":
+        filename = f"{customer_name}_{doc.name}.csv"
+    else:
+        filename = f"{supplier_name}_{doc.name}.csv"
 
     # 保存文件并获取文件 URL
     file_url = save_file(

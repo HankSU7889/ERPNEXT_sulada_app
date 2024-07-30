@@ -45,6 +45,9 @@ patches = [
 doc_events = {
     "Purchase Order": {
         "before_save": "sulada_app.events.purchase_order.before_save"
+    },
+    "Delivery Note": {
+        "before_save": "sulada_app.events.purchase_order.before_save"
     }
 }
 
@@ -52,7 +55,8 @@ doc_events = {
 
 doctype_js = {
     "Purchase Order": "public/js/purchase_order_custom.js",
-    "Material Request": "public/js/material_request_custom.js"
+    "Material Request": "public/js/material_request_custom.js",
+    "Delivery Note": "public/js/delivery_note_custom.js"
 }
 
 # required_apps = []
