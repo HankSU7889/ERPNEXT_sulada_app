@@ -40,20 +40,20 @@ No changes made on the page, 页面未发生任何更改
 月升,Moonrise
 深棕,Dark Brown
 浅棕,Light Brown
-销售清单,Proforma Invoice
-销售方,Seller
-发货人,Shipper
-地址,Address
-联系电话,Contact Number
-订单日期,Order Date
-收货人,Consignee
-唛头,Shipping Mark
-快递单号,Tracking Number
-品名,Description
-物料编码,Item Code
-数量,Quantity
-单价,Unit Price
-总价,Amount
-手机保护壳,Phone Case
-总数量,Total Quantity
-总金额,Total Amount
+Proforma Invoice,销售清单
+Seller,销售方
+Shipper,发货人
+Address,地址
+Contact Number,联系电话
+Order Date,订单日期
+Consignee,收货人
+Shipping Mark,唛头
+Tracking Number,快递单号
+Description,品名
+Item Code,物料编码
+Quantity,数量
+Unit Price,单价
+Amount,总价
+Phone Case,手机保护壳
+Total Quantity,总数量
+Total Amount,总金额
