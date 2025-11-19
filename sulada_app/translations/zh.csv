@@ -49,7 +49,7 @@ Order Date,订单日期
 Consignee,收货人
 Shipping Mark,唛头
 Tracking Number,快递单号
-Description,品名
+Commodity,品名
 Item Code,物料编码
 Quantity,数量
 Unit Price,单价
@@ -57,3 +57,4 @@ Amount,总价
 Phone Case,手机保护壳
 Total Quantity,总数量
 Total Amount,总金额
+Packing List,装箱清单
